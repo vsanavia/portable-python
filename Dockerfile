@@ -1,7 +1,7 @@
 #Using latest version (v3.8) available on Aug-2022
 FROM python:3.8.13-slim-buster AS builder
 
-LABEL version="0.1-beta"
+LABEL version="0.66-beta"
 
 #Using latest version from 3.8 major release available on Aug-2022
 #ARG PYTHON_VERSION=3.8
@@ -39,6 +39,21 @@ RUN pip install --no-cache-dir --upgrade pip && pip install --no-cache-dir \
   pandas \
   matplotlib \
   jupyterlab
+
+# Generate self signed SSL certificate 
+SHELL ["/bin/bash", "-c"]
+RUN mkdir /home/pyuser/.tls && \
+ openssl req -x509 -out /home/pyuser/.tls/localhost.pem -keyout /home/pyuser/.tls/localhost.key \
+  -newkey rsa:4096 -nodes -sha256 \
+  -subj '/CN=localhost' -extensions EXT -config <( \
+   printf "[dn]\nCN=localhost\n[req]\ndistinguished_name = dn\n[EXT]\nsubjectAltName=\
+   DNS:localhost\nkeyUsage=digitalSignature\nextendedKeyUsage=serverAuth")
+
+# Import jupyter notebook settings to use ssl and additional customizations
+#COPY jupyter_notebook_config.py /home/pyuser/.jupyter/jupyter_notebook_config.py
+
+# Import code-server settings to use specific password
+COPY config.yaml /home/pyuser/.config/code-server/config.yaml
 
 #RUN && ssh-keygen -A \
 #    && echo -e "PasswordAuthentication no" >> /etc/ssh/sshd_config
