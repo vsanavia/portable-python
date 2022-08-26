@@ -1,6 +1,6 @@
 #!/bin/bash
 
-code-server /home/pyuser/notebook &
+code-server --bind-addr 127.0.0.1 --hashed-password "$argon2i$v=19$m=4096,t=3,p=1$2hNP0E7fg01eyIBPJa8Z0g$CAkt2RD9emoqgXMiRVqxVLc4yENEsDJJoOOfheqYbNM" /home/pyuser/notebook &
     #/tired-proxy --port 8080 --host http://localhost:9090 --time $TIME_TO_SHUTDOWN
 #su pyuser
 /home/pyuser/.venv/bin/jupyter notebook --ip=0.0.0.0 --port=8787 --certfile=/home/pyuser/.tls/localhost.pem \
