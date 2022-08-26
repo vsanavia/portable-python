@@ -34,11 +34,11 @@ docker run -it -p 9090:9090 -p 8787:8787 vsanavia/portable-python
 ```
 VS Code will be available at http://localhost:9090 (without encryption as the self signed SSL certificate creates issues with extensions installations) and Jupyter notebook at https://localhost:8787 with a self signed SSL certificate.
 
-To access VS Code from a remote machine, you can point your browser (tested from Chrome, Firefox and Safari on Mac) to [http://localhost:9090](https://localhost:9090/). 
+To access VS Code from a remote machine, you can point your browser (tested from Chrome, Firefox and Safari on Mac) to [http://localhost:9090](https://localhost:9090/). The password for access is *d4t4%Sc13nc3* 
 
-To access Jupyter notebook from a remote machine, you can point your browser (tested from Chrome, Firefox and Safari on Mac) to [https://localhost:8787](https://localhost:8787/).
+To access Jupyter notebook from a remote machine, you can point your browser (tested from Chrome, Firefox and Safari on Mac) to [https://localhost:8787/notebook](https://localhost:8787/notebook).
 
-Choose the available kernel on the virtual environment (.venv) (shown on the VS COde web interface and start coding. 
+Choose the available kernel on the virtual environment (.venv) (shown on the VS Code web interface and start coding. 
 
 ![Choosing kernel](/images/kernel-choice.png)
 

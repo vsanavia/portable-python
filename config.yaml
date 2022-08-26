@@ -1,0 +1,4 @@
+bind-addr: 0.0.0.0:9090
+auth: password
+hashed-password: "$argon2i$v=19$m=4096,t=3,p=1$2hNP0E7fg01eyIBPJa8Z0g$CAkt2RD9emoqgXMiRVqxVLc4yENEsDJJoOOfheqYbNM"
+cert: false
