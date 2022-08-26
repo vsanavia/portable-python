@@ -52,8 +52,8 @@ RUN mkdir /home/pyuser/.tls && \
 # Import jupyter notebook settings to use ssl and additional customizations
 #COPY jupyter_notebook_config.py /home/pyuser/.jupyter/jupyter_notebook_config.py
 
-# Import code-server settings to use specific password
-#COPY config.yaml /home/pyuser/.config/code-server/config.yaml
+# Import code-server settings to disable password
+COPY config.yaml /home/pyuser/.config/code-server/config.yaml
 
 #RUN && ssh-keygen -A \
 #    && echo -e "PasswordAuthentication no" >> /etc/ssh/sshd_config
