@@ -1,4 +1,8 @@
-![portable-python icon](/images/icon.png)
+![GitHub](https://img.shields.io/github/license/vsanavia/portable-python)
+![GitHub last commit](https://img.shields.io/github/last-commit/vsanavia/portable-python)
+![GitHub followers](https://img.shields.io/github/followers/vsanavia?style=social)
+[![Medium vsanavia](https://img.shields.io/badge/medium.com%2F@vsanavia-subscribe-blueviolet)](https://medium.com/@vsanavia)
+![Twitter Follow](https://img.shields.io/twitter/follow/vsanavia?style=social)![portable-python icon](/images/icon.png)
 
 # **portable-python**
 
