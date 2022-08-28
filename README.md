@@ -2,7 +2,10 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/vsanavia/portable-python)
 ![GitHub followers](https://img.shields.io/github/followers/vsanavia?style=social)
 [![Medium vsanavia](https://img.shields.io/badge/medium.com%2F@vsanavia-subscribe-blueviolet)](https://medium.com/@vsanavia)
-![Twitter Follow](https://img.shields.io/twitter/follow/vsanavia?style=social)![portable-python icon](/images/icon.png)
+![Twitter Follow](https://img.shields.io/twitter/follow/vsanavia?style=social)
+![Known Vulnerabilities](https://snyk.io/test/github/vsanavia/portable-python/badge.svg)]
+![portable-python icon](/images/icon.png)
+
 
 # **portable-python**
 
@@ -25,7 +28,11 @@ On a machine with docker (tested with [docker desktop](https://www.docker.com/pr
 ```
 git clone https://github.com/vsanavia/portable-python.git
 ```
+Enter the portable-python directory:
 
+```
+cd portable-python
+```
 Docker build your development environment:
 
 ```
