@@ -35,10 +35,10 @@ RUN virtualenv -p /usr/local/bin/python ~/.venv && \
   echo 'source ~/.venv/bin/activate' >> ~/.bashrc 
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 RUN pip install --no-cache-dir --upgrade pip && pip install --no-cache-dir \
-  numpy \
-  pandas \
-  matplotlib \
-  jupyterlab
+  numpy==1.23.2 \
+  pandas==1.4.3 \
+  matplotlib==3.5.3 \
+  jupyterlab==3.4.5
 
 # Generate self signed SSL certificate 
 SHELL ["/bin/bash", "-c"]
