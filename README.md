@@ -4,6 +4,7 @@
 [![Medium vsanavia](https://img.shields.io/badge/medium.com%2F@vsanavia-subscribe-blueviolet)](https://medium.com/@vsanavia)
 ![Twitter Follow](https://img.shields.io/twitter/follow/vsanavia?style=social)
 ![Known Vulnerabilities](https://snyk.io/test/github/vsanavia/portable-python/badge.svg)
+[![ci](https://github.com/vsanavia/portable-python/actions/workflows/build-push.yml/badge.svg?event=push)](https://github.com/vsanavia/portable-python/actions/workflows/build-push.yml)
 ![portable-python icon](/images/icon.png)
 
 
