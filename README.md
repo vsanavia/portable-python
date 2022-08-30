@@ -16,9 +16,9 @@ Containerized python development environment (or poor man's codespaces ;)). The 
 
 2. Python runs on a virtual environment created with the [virtualenv](https://virtualenv.pypa.io/en/latest/) utility.
 
-3. [NumPy](https://numpy.org/), [pandas](https://pandas.pydata.org/) and [matplotlib](https://matplotlib.org/) python modules are preinstalled by default. 
+3. [NumPy v. 1.23.2](https://numpy.org/), [pandas v. 1.4.3](https://pandas.pydata.org/) and [matplotlib v. 3.5.3](https://matplotlib.org/) python modules are preinstalled by default. 
 
-4. [Jupyterlab](https://jupyter.org/) is preinstalled and run by the entrypoint.sh script.
+4. [Jupyterlab v. 3.4.5](https://jupyter.org/) is preinstalled and run by the entrypoint.sh script.
 
 5. [code-server](https://github.com/coder/code-server) to allow running [VS Code] on your browser from any machine
 
