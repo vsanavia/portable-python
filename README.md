@@ -50,7 +50,7 @@ To access VS Code from a remote machine, you can point your browser (tested from
 
 To access Jupyter notebook from a remote machine, you can point your browser (tested from Chrome, Firefox and Safari on Mac) to [https://localhost:8787/notebook](https://localhost:8787/notebook).
 
-Choose the available kernel on the virtual environment (.venv) (shown on the VS Code web interface and start coding
+Choose the available kernel on the virtual environment (.venv) (shown on the VS Code web interface and start coding.
 
 ![Choosing kernel](/images/kernel-choice.png)
 
