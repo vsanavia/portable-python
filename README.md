@@ -48,7 +48,7 @@ VS Code will be available at http://localhost:9090 (without encryption as the se
 
 To access VS Code from a remote machine, you can point your browser (tested from Chrome, Firefox and Safari on Mac) to [http://localhost:9090](https://localhost:9090/). 
 
-To access Jupyter notebook from a remote machine, you can point your browser (tested from Chrome, Firefox and Safari on Mac) to [https://localhost:8787/notebook](https://localhost:8787/notebook).
+To access Jupyter Lab from a remote machine, you can point your browser (tested from Chrome, Firefox and Safari on Mac) to [https://localhost:8787/notebook](https://localhost:8787/notebook). You will receive a warning about an untrusted certificate on the first visit.
 
 Choose the available kernel on the virtual environment (.venv) (shown on the VS Code web interface and start coding.
 
