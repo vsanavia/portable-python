@@ -1,7 +1,7 @@
 #Using latest version (v3.8) available on Aug-2022
 FROM python:3.8.13-slim-buster AS builder
 
-LABEL version="0.1.0-beta"
+LABEL version="0.1.1-beta"
 
 #Using latest version from 3.8 major release available on Aug-2022
 #ARG PYTHON_VERSION=3.8
