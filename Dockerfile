@@ -1,7 +1,7 @@
 #Using latest version (v3.8) available on Aug-2022
 FROM python:3.8.13-slim-buster AS builder
 
-LABEL version="0.66-beta"
+LABEL version="0.1.0-beta"
 
 #Using latest version from 3.8 major release available on Aug-2022
 #ARG PYTHON_VERSION=3.8
@@ -54,20 +54,6 @@ RUN mkdir /home/pyuser/.tls && \
 
 # Import code-server settings to disable password
 COPY config.yaml /home/pyuser/.config/code-server/config.yaml
-
-#RUN && ssh-keygen -A \
-#    && echo -e "PasswordAuthentication no" >> /etc/ssh/sshd_config
-
-# create user SSH configuration
-#RUN mkdir -p /home/pyuser/.ssh \
-    # only this user should be able to read this folder (it may contain private keys)
-    #&& chmod 0700 /home/pyuser/.ssh
-    # unlock the user
-    #&& passwd -u root
-
-#ARG ssh_pub_key
-
-#RUN echo "$ssh_pub_key" > /home/pyuser/.ssh/authorized_keys    
 
 # prepare build dir
 WORKDIR /home/pyuser/notebook
