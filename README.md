@@ -41,7 +41,7 @@ docker build -t vsanavia/portable-python .
 Run your containerized development environment on the background (detached mode) exposing ports 9090 (VS code web) and 8787 (Jupyter notebook)
 
 ```
-docker run -d -p 9090:9090 -p 8787:8787 vsanavia/portable-python
+docker run -d -p 9090:9090 -p 8787:8787 --name popy-container vsanavia/portable-python
 ```
 VS Code will be available at http://localhost:9090 (without encryption as the self signed SSL certificate creates issues with extensions installations) and Jupyter notebook at https://localhost:8787 with a self signed SSL certificate.
 
