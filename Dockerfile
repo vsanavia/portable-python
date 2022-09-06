@@ -23,7 +23,9 @@ RUN apt-get update && apt-get install -y \
   apt-get clean && rm -rf /var/lib/apt/lists/* && \
   curl -fsSL https://code-server.dev/install.sh | sh &&\
 # Creation of user to run python tools, virtualenv and jupyter
-  useradd -m -d /home/pyuser -s /bin/bash pyuser
+  useradd -m -d /home/pyuser -s /bin/bash pyuser && \
+  chmod -R 777 /home/pyuser && \
+  chown -R pyuser:pyuser /home/pyuser
 
 WORKDIR /home/pyuser
 
