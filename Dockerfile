@@ -21,7 +21,7 @@ RUN apt-get update && apt-get install -y \
   virtualenv && \
   #Cleanup of apt-get cache to slim down image
   apt-get clean && rm -rf /var/lib/apt/lists/* && \
-# curl -fsSL https://code-server.dev/install.sh | sh &&\
+  curl -fsSL https://code-server.dev/install.sh | sh &&\
 # Creation of user to run python tools, virtualenv and jupyter
   mkdir -p /home/pyuser/.local/lib /home/pyuser/.local/bin && \
 # curl -fL https://github.com/coder/code-server/releases/download/v4.6.1/code-server-4.6.1-linux-amd64.tar.gz \
