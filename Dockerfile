@@ -24,10 +24,10 @@ RUN apt-get update && apt-get install -y \
 # curl -fsSL https://code-server.dev/install.sh | sh &&\
 # Creation of user to run python tools, virtualenv and jupyter
   mkdir -p /home/pyuser/.local/lib /home/pyuser/.local/bin && \
-  curl -fL https://github.com/coder/code-server/releases/download/v4.6.1/code-server-4.6.1-linux-amd64.tar.gz \
-  | tar -C /home/pyuser/.local/lib -xz && \
-  mv /home/pyuser/.local/lib/code-server-4.6.1-linux-amd64 /home/pyuser/.local/lib/code-server-4.6.1 && \ 
-  ln -s /home/pyuser/.local/lib/code-server-4.6.1/bin/code-server /home/pyuser/.local/bin/code-server && \
+# curl -fL https://github.com/coder/code-server/releases/download/v4.6.1/code-server-4.6.1-linux-amd64.tar.gz \
+# | tar -C /home/pyuser/.local/lib -xz && \
+# mv /home/pyuser/.local/lib/code-server-4.6.1-linux-amd64 /home/pyuser/.local/lib/code-server-4.6.1 && \ 
+# ln -s /home/pyuser/.local/lib/code-server-4.6.1/bin/code-server /home/pyuser/.local/bin/code-server && \
   useradd -m -d /home/pyuser -s /bin/bash pyuser && \
   chmod -R 777 /home/pyuser && \
   chown -R pyuser:pyuser /home/pyuser
