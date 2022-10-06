@@ -1,7 +1,7 @@
-#Using latest version (v3.8) available on Aug-2022
-FROM python:3.8.13-slim-buster AS builder
+#Using latest version (v3.8) available on Oct-2022
+FROM python:3.8.14-slim-bullseye AS builder
 
-LABEL version="0.1.1-beta"
+LABEL version="0.1.2-beta"
 
 #Using latest version from 3.8 major release available on Aug-2022
 #ARG PYTHON_VERSION=3.8
@@ -23,10 +23,16 @@ RUN apt-get update && apt-get install -y \
   apt-get clean && rm -rf /var/lib/apt/lists/* && \
   curl -fsSL https://code-server.dev/install.sh | sh &&\
 # Creation of user to run python tools, virtualenv and jupyter
+# mkdir -p /home/pyuser/.local/lib /home/pyuser/.local/bin && \
+# curl -fL https://github.com/coder/code-server/releases/download/v4.6.1/code-server-4.6.1-linux-amd64.tar.gz \
+# | tar -C /home/pyuser/.local/lib -xz && \
+# mv /home/pyuser/.local/lib/code-server-4.6.1-linux-amd64 /home/pyuser/.local/lib/code-server-4.6.1 && \ 
+# ln -s /home/pyuser/.local/lib/code-server-4.6.1/bin/code-server /home/pyuser/.local/bin/code-server && \
   useradd -m -d /home/pyuser -s /bin/bash pyuser && \
   chmod -R 777 /home/pyuser && \
   chown -R pyuser:pyuser /home/pyuser
 
+ENV PATH="/home/pyuser/.local/bin:$PATH"
 WORKDIR /home/pyuser
 
 USER pyuser
