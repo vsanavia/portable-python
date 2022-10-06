@@ -1,5 +1,5 @@
 #Using latest version (v3.8) available on Oct-2022
-FROM python:3.8.14-slim-bullseye AS builder
+FROM python:3.9.14-slim-bullseye AS builder
 
 LABEL version="0.1.2-beta"
 
@@ -15,10 +15,10 @@ RUN apt-get update && apt-get install -y \
   gcc \    
   # Tooling 
   git \
-  curl \
+  curl &&\
   # openssh \
   # Dependency for python virtual environment
-  virtualenv && \
+  # virtualenv && \
   #Cleanup of apt-get cache to slim down image
   apt-get clean && rm -rf /var/lib/apt/lists/* && \
   curl -fsSL https://code-server.dev/install.sh | sh &&\
@@ -39,14 +39,14 @@ USER pyuser
 
 # Installation of Python DS related modules and Jupyterlab
 ENV VIRTUAL_ENV=/home/pyuser/.venv
-RUN virtualenv -p /usr/local/bin/python ~/.venv && \
+RUN python -m venv ~/.venv && \
   echo 'source ~/.venv/bin/activate' >> ~/.bashrc 
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 RUN pip install --no-cache-dir --upgrade pip && pip install --no-cache-dir \
-  numpy==1.23.2 \
-  pandas==1.4.3 \
-  matplotlib==3.5.3 \
-  jupyterlab==3.4.5
+  numpy==1.23.3 \
+  pandas==1.5.0 \
+  matplotlib==3.6.0 \
+  jupyterlab==3.4.8
 
 # Generate self signed SSL certificate 
 SHELL ["/bin/bash", "-c"]
