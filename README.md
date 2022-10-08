@@ -11,7 +11,7 @@
 
 Containerized python development environment (or poor man's codespaces ;)). The default configuration is intended to be used as a datascience focused environment and has the following components:
 
-1. Based on the official [Python 3.9.11 slim bullseye image](https://hub.docker.com/_/python ).
+1. Based on the official [Python 3.9.14 slim bullseye image](https://hub.docker.com/_/python ).
 
 2. Python runs on a virtual environment created with the [venv](https://docs.python.org/3.9/library/venv.html) utility.
 
