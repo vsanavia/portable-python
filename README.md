@@ -11,13 +11,13 @@
 
 Containerized python development environment (or poor man's codespaces ;)). The default configuration is intended to be used as a datascience focused environment and has the following components:
 
-1. Based on the official [Python 3.8.13 slim image](https://hub.docker.com/_/python ).
+1. Based on the official [Python 3.9.11 slim bullseye image](https://hub.docker.com/_/python ).
 
-2. Python runs on a virtual environment created with the [virtualenv](https://virtualenv.pypa.io/en/latest/) utility.
+2. Python runs on a virtual environment created with the [venv](https://docs.python.org/3.9/library/venv.html) utility.
 
-3. [NumPy v. 1.23.2](https://numpy.org/), [pandas v. 1.4.3](https://pandas.pydata.org/) and [matplotlib v. 3.5.3](https://matplotlib.org/) python modules are preinstalled by default. 
+3. [NumPy v. 1.23.3](https://numpy.org/), [pandas v. 1.5.0](https://pandas.pydata.org/) and [matplotlib v. 3.6.0](https://matplotlib.org/) python modules are preinstalled by default. 
 
-4. [Jupyterlab v. 3.4.5](https://jupyter.org/) is preinstalled and run by the entrypoint.sh script.
+4. [Jupyterlab v. 3.4.8](https://jupyter.org/) is preinstalled and run by the entrypoint.sh script.
 
 5. [code-server](https://github.com/coder/code-server) to allow running [VS Code] on your browser from any machine
 
