@@ -1,6 +1,6 @@
 #!/bin/bash
 
-code-server --bind-addr 0.0.0.0:9090 /home/pyuser/notebook &
+#code-server --bind-addr 0.0.0.0:9090 /home/pyuser/notebook &
     #/tired-proxy --port 8080 --host http://localhost:9090 --time $TIME_TO_SHUTDOWN
 #su pyuser
 /home/pyuser/.venv/bin/jupyter lab --ip=0.0.0.0 --port=8787 --certfile=/home/pyuser/.tls/localhost.pem \
