@@ -41,13 +41,10 @@ USER pyuser
 ENV VIRTUAL_ENV=/home/pyuser/.venv
 RUN python -m venv ~/.venv && \
   echo 'source ~/.venv/bin/activate' >> ~/.bashrc 
+COPY requirements.txt ./
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 RUN pip install --no-cache-dir --upgrade pip && pip install --no-cache-dir \
-  numpy==1.23.3 \
-  pandas==1.5.0 \
-  matplotlib==3.6.0 \
-  jupyterlab==3.4.8
-
+ -r requirements.txt
 # Generate self signed SSL certificate 
 SHELL ["/bin/bash", "-c"]
 RUN mkdir /home/pyuser/.tls && \
