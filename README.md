@@ -15,7 +15,7 @@ Containerized python development environment (or poor man's codespaces ;)). The 
 
 2. Python runs on a virtual environment created with the [venv](https://docs.python.org/3.9/library/venv.html) utility.
 
-3. [NumPy v. 1.23.3](https://numpy.org/), [pandas v. 1.5.0](https://pandas.pydata.org/) and [matplotlib v. 3.6.0](https://matplotlib.org/) python modules are preinstalled by default. 
+3. [NumPy v. 1.23.3](https://numpy.org/), [pandas v. 1.5.1](https://pandas.pydata.org/) and [matplotlib v. 3.6.0](https://matplotlib.org/) python modules are preinstalled by default. 
 
 4. [Jupyterlab v. 3.4.8](https://jupyter.org/) is preinstalled and run by the entrypoint.sh script.
 
