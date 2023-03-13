@@ -1,7 +1,7 @@
-#Using latest version (v3.8) available on Oct-2022
-FROM python:3.9.14-slim-bullseye AS builder
+#Using latest version (v3.10) available on Mar-2023
+FROM python:3.10.10-slim-bullseye AS builder
 
-LABEL version="0.1.2-beta"
+LABEL version="0.2.0-beta"
 
 #Using latest version from 3.8 major release available on Aug-2022
 #ARG PYTHON_VERSION=3.8
